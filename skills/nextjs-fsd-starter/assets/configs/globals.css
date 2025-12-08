@@ -1,0 +1,239 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@layer base {
+  :root {
+    /* ────────────────────────────── */
+    /*          Color tokens          */
+    /* ────────────────────────────── */
+
+    /* Light mode */
+    --background: oklch(0.985 0.003 95);
+    --foreground: oklch(0.18 0.04 255);
+
+    --card: oklch(0.99 0.002 95);
+    --card-foreground: oklch(0.18 0.04 255);
+
+    --popover: oklch(0.99 0.002 95);
+    --popover-foreground: oklch(0.18 0.04 255);
+
+    /* Primary: 메인 액션용 블루 */
+    --primary: oklch(0.60 0.15 255);
+    --primary-foreground: oklch(0.99 0.002 95);
+
+    /* Secondary: 소프트 블루-그레이 */
+    --secondary: oklch(0.92 0.025 255);
+    --secondary-foreground: oklch(0.24 0.035 255);
+
+    /* Muted: 그레이 톤 (비활성/설명) */
+    --muted: oklch(0.94 0.012 255);
+    --muted-foreground: oklch(0.55 0.03 255);
+
+    /* Accent: 티얼 계열 포인트 */
+    --accent: oklch(0.72 0.12 190);
+    --accent-foreground: oklch(0.12 0.03 200);
+
+    /* Destructive: 레드 (위험/삭제) */
+    --destructive: oklch(0.58 0.17 27);
+    --destructive-foreground: oklch(0.99 0.002 95);
+
+    /* Form & border */
+    --border: oklch(0.90 0.01 255);
+    --input: oklch(0.97 0.004 95);
+    --ring: oklch(0.60 0.15 255);
+
+    --radius: 0.5rem;
+
+    /* ────────────────────────────── */
+    /*        Spacing (space)        */
+    /* ────────────────────────────── */
+
+    --space-2xs: 0.125rem;  /* 2px */
+    --space-xs:  0.25rem;   /* 4px */
+    --space-sm:  0.5rem;    /* 8px */
+    --space-md:  0.75rem;   /* 12px */
+    --space-lg:  1rem;      /* 16px */
+    --space-xl:  1.5rem;    /* 24px */
+    --space-2xl: 2rem;      /* 32px */
+
+    /* ────────────────────────────── */
+    /*          Shadow tokens        */
+    /* ────────────────────────────── */
+
+    --shadow-xs: 0 1px 2px oklch(0 0 0 / 0.04);
+    --shadow-sm: 0 1px 3px oklch(0 0 0 / 0.08), 0 1px 2px oklch(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px oklch(0 0 0 / 0.08), 0 2px 4px oklch(0 0 0 / 0.05);
+    --shadow-lg: 0 10px 15px oklch(0 0 0 / 0.08), 0 4px 6px oklch(0 0 0 / 0.05);
+    --shadow-xl: 0 20px 25px oklch(0 0 0 / 0.08), 0 10px 10px oklch(0 0 0 / 0.04);
+
+    /* ────────────────────────────── */
+    /*            Z-index            */
+    /* ────────────────────────────── */
+
+    --z-base: 1;
+    --z-above: 10;
+    --z-dropdown: 100;
+    --z-modal: 1000;
+    --z-popover: 1500;
+    --z-toast: 2000;
+    --z-max: 9999;
+
+    /* ────────────────────────────── */
+    /*      Interaction tokens       */
+    /* ────────────────────────────── */
+
+    --opacity-hover: 0.92;
+    --opacity-active: 0.85;
+
+    --scale-hover: 1.02;
+    --scale-active: 0.98;
+
+    --transition-fast: 120ms;
+    --transition-normal: 200ms;
+    --transition-slow: 300ms;
+
+    --ease-default: cubic-bezier(0.2, 0.0, 0.2, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+
+    --focus-ring-size: 2px;
+    --focus-ring-color: var(--ring);
+  }
+
+  .dark {
+    /* ────────────────────────────── */
+    /*          Color tokens          */
+    /* ────────────────────────────── */
+
+    --background: oklch(0.14 0.02 255);
+    --foreground: oklch(0.97 0.01 95);
+
+    --card: oklch(0.17 0.02 255);
+    --card-foreground: oklch(0.97 0.01 95);
+
+    --popover: oklch(0.17 0.02 255);
+    --popover-foreground: oklch(0.97 0.01 95);
+
+    --primary: oklch(0.72 0.16 255);
+    --primary-foreground: oklch(0.10 0.02 255);
+
+    --secondary: oklch(0.28 0.03 255);
+    --secondary-foreground: oklch(0.96 0.01 95);
+
+    --muted: oklch(0.22 0.02 255);
+    --muted-foreground: oklch(0.70 0.035 255);
+
+    --accent: oklch(0.73 0.14 190);
+    --accent-foreground: oklch(0.10 0.02 200);
+
+    --destructive: oklch(0.62 0.16 27);
+    --destructive-foreground: oklch(0.10 0.02 255);
+
+    --border: oklch(0.26 0.03 255);
+    --input: oklch(0.20 0.02 255);
+    --ring: oklch(0.72 0.16 255);
+
+    /* radius는 light와 동일 사용 */
+    /* --radius 그대로 상속 */
+
+    /* ────────────────────────────── */
+    /*          Shadow tokens        */
+    /* ────────────────────────────── */
+
+    --shadow-xs: 0 1px 2px oklch(0 0 0 / 0.15);
+    --shadow-sm: 0 1px 3px oklch(0 0 0 / 0.20);
+    --shadow-md: 0 4px 6px oklch(0 0 0 / 0.22);
+    --shadow-lg: 0 10px 15px oklch(0 0 0 / 0.25);
+    --shadow-xl: 0 20px 25px oklch(0 0 0 / 0.28);
+
+    /* Z-index는 :root 값 그대로 사용 (override 필요 없으면 생략해도 됨) */
+
+    /* ────────────────────────────── */
+    /*      Interaction tokens       */
+    /* ────────────────────────────── */
+
+    --opacity-hover: 0.95;
+    --opacity-active: 0.9;
+
+    --scale-hover: 1.015;
+    --scale-active: 0.985;
+
+    --transition-fast: 120ms;
+    --transition-normal: 200ms;
+    --transition-slow: 300ms;
+
+    --ease-default: cubic-bezier(0.2, 0.0, 0.2, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+
+    --focus-ring-size: 2px;
+    --focus-ring-color: var(--ring);
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);  
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+
+  --opacity-hover: var(--opacity-hover);
+  --opacity-active: var(--opacity-active);
+
+  --scale-hover: var(--scale-hover);
+  --scale-active: var(--scale-active);
+
+  --transition-fast: var(--transition-fast);
+  --transition-normal: var(--transition-normal);
+  --transition-slow: var(--transition-slow);
+
+  --ease-default: var(--ease-default);
+  --ease-out: var(--ease-out);
+  --ease-in: var(--ease-in);
+
+  --focus-ring-size: var(--focus-ring-size);
+  --focus-ring-color: var(--focus-ring-color);
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Reset heading styles */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-inherit m-0 p-0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+}
