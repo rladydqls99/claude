@@ -42,7 +42,7 @@ cd <project-name>
 pnpm add -D prettier eslint-config-prettier eslint-plugin-prettier husky lint-staged prettier-plugin-tailwindcss
 
 # ESLint 9 dependencies
-pnpm add -D @eslint/js typescript-eslint eslint-plugin-react-hooks @next/eslint-plugin-next
+pnpm add -D @eslint/js typescript-eslint eslint-plugin-react-hooks @next/eslint-plugin-next eslint-import-resolver-typescript eslint-plugin-import
 
 # React Compiler
 pnpm add -D babel-plugin-react-compiler eslint-plugin-react-compiler
@@ -152,6 +152,7 @@ Run the formatter to ensure all generated and copied files follow the project st
 
 ```bash
 pnpm format
+pnpm lint:fix
 ```
 
 ## FSD Layer Overview

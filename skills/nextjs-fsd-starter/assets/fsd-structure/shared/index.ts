@@ -1,7 +1,6 @@
 // Shared barrel file - export all client-safe modules
 
 // UI Components
-// UI Components
 export { default as Button } from "./ui/button";
 export { default as IconButton } from "./ui/icon-button";
 export { default as Input } from "./ui/input";
@@ -15,6 +14,7 @@ export { default as Select } from "./ui/select";
 export { default as Dialog } from "./ui/dialog";
 export { default as Popover } from "./ui/popover";
 export { default as Tooltip } from "./ui/tooltip";
+export { default as Card } from "./ui/card";
 
 // Utilities
 export * from "./lib/cn";

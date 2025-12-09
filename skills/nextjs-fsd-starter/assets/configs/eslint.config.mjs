@@ -1,6 +1,7 @@
 import js from "@eslint/js";
 import tseslint from "typescript-eslint";
 import prettier from "eslint-plugin-prettier/recommended";
+import importPlugin from "eslint-plugin-import";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactCompiler from "eslint-plugin-react-compiler";
 import nextPlugin from "@next/eslint-plugin-next";
@@ -26,10 +27,22 @@ const eslintConfig = tseslint.config(
   // React and Next.js
   {
     files: ["**/*.{ts,tsx}"],
+    extends: [
+      importPlugin.flatConfigs.recommended,
+      importPlugin.flatConfigs.typescript,
+    ],
     plugins: {
       "react-hooks": reactHooks,
       "react-compiler": reactCompiler,
       "@next/next": nextPlugin,
+    },
+    settings: {
+      "import/resolver": {
+        typescript: {
+          alwaysTryTypes: true,
+          project: "./tsconfig.json",
+        },
+      },
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
@@ -42,6 +55,24 @@ const eslintConfig = tseslint.config(
         { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
       ],
       "@typescript-eslint/no-explicit-any": "warn",
+      "import/order": [
+        "warn",
+        {
+          groups: [
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "sibling",
+            "index",
+          ],
+          pathGroups: [
+            { pattern: "@/**", group: "internal", position: "after" },
+          ],
+          "newlines-between": "always",
+          alphabetize: { order: "asc", caseInsensitive: true },
+        },
+      ],
     },
   },
 
@@ -183,7 +214,7 @@ const eslintConfig = tseslint.config(
         },
       ],
     },
-  }
+  },
 );
 
 export default eslintConfig;
