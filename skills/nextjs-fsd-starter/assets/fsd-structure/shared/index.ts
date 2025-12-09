@@ -15,6 +15,7 @@ export { default as Dialog } from "./ui/dialog";
 export { default as Popover } from "./ui/popover";
 export { default as Tooltip } from "./ui/tooltip";
 export { default as Card } from "./ui/card";
+export { default as Tabs } from "./ui/tabs";
 
 // Utilities
 export * from "./lib/cn";

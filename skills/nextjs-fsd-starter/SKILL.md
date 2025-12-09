@@ -25,6 +25,8 @@ Create a production-ready Next.js project with FSD architecture and modern tooli
 - @radix-ui (headless UI primitives)
 - tailwind-merge (class merging)
 - clsx (conditional classes)
+- zod (schema validation)
+- @tanstack/react-query (data fetching)
 
 ## Setup Process
 
@@ -48,10 +50,10 @@ pnpm add -D @eslint/js typescript-eslint eslint-plugin-react-hooks @next/eslint-
 pnpm add -D babel-plugin-react-compiler eslint-plugin-react-compiler
 
 # Runtime dependencies
-pnpm add date-fns zustand es-toolkit react-hook-form tw-animate-css lucide-react tailwind-merge clsx
+pnpm add date-fns zustand es-toolkit react-hook-form tw-animate-css lucide-react tailwind-merge clsx zod @hookform/resolvers @tanstack/react-query @tanstack/react-query-devtools
 
 # Radix UI primitives
-pnpm add @radix-ui/react-dialog @radix-ui/react-popover @radix-ui/react-tooltip @radix-ui/react-select @radix-ui/react-checkbox @radix-ui/react-slot
+pnpm add @radix-ui/react-dialog @radix-ui/react-popover @radix-ui/react-tooltip @radix-ui/react-select @radix-ui/react-checkbox @radix-ui/react-slot @radix-ui/react-tabs
 ```
 
 ### 3. Enable React Compiler
