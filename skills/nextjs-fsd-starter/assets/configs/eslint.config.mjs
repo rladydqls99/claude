@@ -92,25 +92,25 @@ const eslintConfig = tseslint.config(
             },
             // Enforce public API for entities
             {
-              group: ["@/entities/*/*", "@/entities/**/*"],
+              group: ["@/entities/*/*", "@/entities/*/*/**"],
               message:
                 "Use public API: import from '@entities/<slice>' instead of internal modules",
             },
             // Enforce public API for features
             {
-              group: ["@/features/*/*", "@/features/**/*"],
+              group: ["@/features/*/*", "@/features/*/*/**"],
               message:
                 "Use public API: import from '@features/<slice>' instead of internal modules",
             },
             // Enforce public API for widgets
             {
-              group: ["@/widgets/*/*", "@/widgets/**/*"],
+              group: ["@/widgets/*/*", "@/widgets/*/*/**"],
               message:
                 "Use public API: import from '@widgets/<slice>' instead of internal modules",
             },
             // Enforce public API for views
             {
-              group: ["@/views/*/*", "@/views/**/*"],
+              group: ["@/views/*/*", "@/views/*/*/**"],
               message:
                 "Use public API: import from '@views/<slice>' instead of internal modules",
             },
