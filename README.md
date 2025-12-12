@@ -8,6 +8,9 @@ Claude Code용 플러그인 마켓플레이스입니다.
 # 마켓플레이스 추가
 /plugin marketplace add https://github.com/rladydqls99/claude
 
+# 마켓플레이스 업데이트
+/plugin marketplace update yongbin-skill
+
 # 플러그인 설치
 /plugin install frontend
 ```
