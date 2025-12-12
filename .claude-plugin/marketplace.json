@@ -1,7 +1,9 @@
 {
-  "name": "yongbin's skill",
-  "owner": "yongbin Kim",
-  "email": "rladydqls12@gmail.com",
+  "name": "yongbin-skill",
+  "owner": {
+    "name": "yongbin Kim",
+    "email": "rladydqls12@gmail.com"
+  },
   "license": "MIT",
   "plugins": [
     {
