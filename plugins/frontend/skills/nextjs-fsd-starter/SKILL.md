@@ -130,12 +130,12 @@ Ensure these path aliases exist:
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"],
-      "@shared": ["./src/shared"],
-      "@shared/server": ["./src/shared/server"],
-      "@entities/*": ["./src/entities/*"],
-      "@features/*": ["./src/features/*"],
-      "@widgets/*": ["./src/widgets/*"],
-      "@views/*": ["./src/views/*"]
+      "@/shared": ["./src/shared"],
+      "@/shared/server": ["./src/shared/server"],
+      "@/entities/*": ["./src/entities/*"],
+      "@/features/*": ["./src/features/*"],
+      "@/widgets/*": ["./src/widgets/*"],
+      "@/views/*": ["./src/views/*"]
     }
   }
 }

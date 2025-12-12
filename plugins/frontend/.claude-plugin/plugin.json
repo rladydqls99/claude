@@ -1,0 +1,10 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Frontend development tools and skills for Claude Code",
+  "license": "MIT",
+  "author": {
+    "name": "yongbin Kim",
+    "email": "rladydqls12@gmail.com"
+  }
+}

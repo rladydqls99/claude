@@ -23,15 +23,15 @@ views/
 └── home/
     ├── index.ts
     ├── api/
-    │   └── fetchHomeData.ts
+    │   └── fetch-home-data.ts
     ├── model/
     │   └── types.ts
     ├── ui/
-    │   ├── HomePage.tsx
-    │   ├── HeroSection.tsx
-    │   └── FeaturesSection.tsx
+    │   ├── home-page.tsx
+    │   ├── hero-section.tsx
+    │   └── features-section.tsx
     ├── lib/
-    │   └── useHomeData.ts
+    │   └── use-home-data.ts
     └── config/
         └── sections.ts
 ```

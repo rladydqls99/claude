@@ -22,16 +22,16 @@ entities/
 └── user/
     ├── index.ts
     ├── api/
-    │   └── fetchUser.ts
+    │   └── fetch-user.ts
     ├── model/
     │   ├── types.ts        # User types
     │   ├── schema.ts       # Zod validation schemas
     │   └── defaults.ts     # Default values
     ├── ui/
-    │   ├── UserAvatar.tsx
-    │   └── UserCard.tsx
+    │   ├── user-avatar.tsx
+    │   └── user-card.tsx
     ├── lib/
-    │   └── useUser.ts
+    │   └── use-user.ts
     └── config/
         └── constants.ts
 ```

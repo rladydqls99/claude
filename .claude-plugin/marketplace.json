@@ -1,0 +1,17 @@
+{
+  "name": "yongbin's skill",
+  "owner": "yongbin Kim",
+  "email": "rladydqls12@gmail.com",
+  "license": "MIT",
+  "plugins": [
+    {
+      "name": "frontend",
+      "source": "./plugins/frontend",
+      "description": "Frontend development tools and skills for Claude Code",
+      "version": "1.0.0",
+      "author": {
+        "name": "yongbin Kim"
+      }
+    }
+  ]
+}

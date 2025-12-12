@@ -1,23 +1,25 @@
-# Claude Configuration Repository
+# Claude Code Plugin Marketplace
 
-Claude Code 사용을 위한 스킬(Skills), 에이전트(Agents), 설정 파일을 관리하는 저장소입니다.
+Claude Code용 플러그인 마켓플레이스입니다.
 
-## 개요
+## 설치 방법
 
-이 저장소는 Claude Code CLI 도구와 함께 사용되는 다양한 설정과 확장 기능을 저장합니다.
+```bash
+# 마켓플레이스 추가
+/plugin marketplace add https://github.com/rladydqls99/claude
 
-- **Skills** - 반복적인 작업을 자동화하는 재사용 가능한 템플릿
-- **Agents** - 특정 도메인에 특화된 작업을 수행하는 에이전트 설정
-- **Configs** - 프로젝트별 Claude Code 설정 파일
-
-## 저장소 구조
-
-```
-claude/
-├── README.md           # 이 파일
-├── skills/             # Claude Code 스킬 모음
-├── agents/             # 커스텀 에이전트 (예정)
-└── configs/            # 설정 파일 (예정)
+# 플러그인 설치
+/plugin install frontend
 ```
 
-각 디렉토리의 하위 항목에는 상세한 README.md가 포함되어 있습니다.
+## 포함된 플러그인
+
+### Frontend Plugin
+
+프론트엔드 개발 도구 및 스킬 모음
+
+**포함된 스킬:**
+
+- `nextjs-fsd-starter` - Feature-Sliced Design 아키텍처를 적용한 Next.js 프로젝트 생성
+
+자세한 내용은 [plugins/frontend/README.md](plugins/frontend/README.md)를 참고하세요.

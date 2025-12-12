@@ -29,11 +29,11 @@ features/
     │   ├── schema.ts       # Login form validation
     │   └── defaults.ts     # Default form values
     ├── ui/
-    │   ├── LoginForm.tsx
-    │   └── LogoutButton.tsx
+    │   ├── login-form.tsx
+    │   └── logout-button.tsx
     ├── lib/
-    │   ├── useAuth.ts
-    │   └── authGuard.ts
+    │   ├── use-auth.ts
+    │   └── auth-guard.ts
     └── config/
         └── settings.ts
 ```

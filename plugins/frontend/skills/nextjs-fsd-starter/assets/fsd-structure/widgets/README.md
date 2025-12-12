@@ -24,13 +24,13 @@ widgets/
     ├── model/
     │   └── types.ts
     ├── ui/
-    │   ├── Header.tsx
-    │   ├── Navigation.tsx
-    │   └── UserMenu.tsx
+    │   ├── header.tsx
+    │   ├── navigation.tsx
+    │   └── user-menu.tsx
     ├── lib/
-    │   └── useNavigation.ts
+    │   └── use-navigation.ts
     └── config/
-        └── menuItems.ts
+        └── menu-items.ts
 ```
 
 ## Import Rules
